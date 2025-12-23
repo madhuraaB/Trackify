@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:padding="24dp"
+    tools:context=".ProfileActivity">
+
+    <!-- Back Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_back_to_home"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textColor="#007BFF"
+        android:textSize="14sp"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconTint="#007BFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/text_profile_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="User Profile"
+        android:textColor="#1E1E1E"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toBottomOf="@id/button_back_to_home"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- User Details Section (Wrapped in ScrollView for flexibility) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/text_profile_title"
+        app:layout_constraintBottom_toTopOf="@id/button_profile_logout">
+
+        <LinearLayout
+            android:id="@+id/layout_user_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1. Name Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:contentPadding="20dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registered Name"
+                        android:textColor="#616161"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <TextView
+                        android:id="@+id/text_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Loading..."
+                        android:textColor="#1E1E1E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="12dp"
+                        app:drawableTint="#007BFF"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 2. Email Card (Now correctly integrated) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:contentPadding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Registered Email"
+                        android:textColor="#616161"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/text_user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="12dp"
+                        android:text="Loading..."
+                        android:textColor="#1E1E1E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:drawableTint="#007BFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- Add other profile details here -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Logout Button (Fixed to the bottom) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_profile_logout"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Log Out"
+        android:textColor="#D32F2F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_logout"
+        app:iconTint="#D32F2F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="#FFCDD2"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

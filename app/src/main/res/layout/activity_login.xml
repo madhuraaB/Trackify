@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+
+        <ImageView
+            android:id="@+id/logo_icon_login"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="80dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/trackify_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Welcome Back !!"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_icon_login" />
+
+        <TextView
+            android:id="@+id/login_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Log in to view your financial summary."
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_email_login"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:endIconDrawable="@drawable/ic_baseline_email_24"  app:endIconMode="custom"
+            app:startIconDrawable="@null"
+            app:layout_constraintTop_toBottomOf="@id/login_subtitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_email_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password_login"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@null" app:layout_constraintTop_toBottomOf="@id/input_layout_email_login">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_password_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:text="Log In"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_password_login" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_login"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/button_login"
+            app:layout_constraintBottom_toBottomOf="@id/button_login"
+            app:layout_constraintStart_toStartOf="@id/button_login"
+            app:layout_constraintEnd_toEndOf="@id/button_login" />
+
+        <TextView
+            android:id="@+id/text_view_register_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Don't have an account? Sign Up"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:textColor="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

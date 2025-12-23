@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Trackify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/design_default_color_primary</item>
+        <item name="colorPrimaryVariant">@color/design_default_color_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Trackify" parent="Base.Theme.Trackify" />
+
+    <style name="Theme.Trackify.NoActionBar" parent="Theme.Trackify" />
+    <style name="ReportRowStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingVertical">8dp</item>
+    </style>
+
+    <style name="ReportLabelStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ReportAmountStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">viewEnd</item>
+    </style>
+
+    <style name="ReportAmountStyle.Positive">
+        <item name="android:textColor">@android:color/holo_green_dark</item>
+    </style>
+
+    <style name="ReportAmountStyle.Negative">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="ReportSeparatorStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#E0E0E0</item>
+    </style>
+</resources>

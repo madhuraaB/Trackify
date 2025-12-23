@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Trackify</string>
+    <string name="title_monthly_trends">Monthly Income vs. Expense</string>
+
+</resources>
